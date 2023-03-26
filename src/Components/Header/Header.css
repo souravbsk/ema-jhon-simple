@@ -1,0 +1,29 @@
+.header{
+    background-color: #1C2B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+.nav-brand .nav-brand-logo{
+    width:140px;
+    height:  42px;
+}
+.nav-links{
+    display: flex;
+    gap: 5px;
+}
+.nav-links li{
+    list-style: none;
+
+}
+.nav-links li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 15px;
+    transition: all 0.5s;
+}
+.nav-links li a:hover{
+    color: orange;
+}
