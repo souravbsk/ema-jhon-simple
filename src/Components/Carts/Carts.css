@@ -1,0 +1,37 @@
+.cart {
+    background: rgba(255, 153, 0, 0.3);
+    padding: 28px 16px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.cart-title {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1C2B35;
+    text-align: center;
+
+}
+
+.cart-content {
+    margin-top: 50px;
+}
+
+.cart-content p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #2A414F;
+    margin-bottom: 25px;
+}
+
+.grand-total {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+}
