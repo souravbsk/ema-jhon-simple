@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Carts.css";
 
 const Carts = ({ cart }) => {
-  console.log(cart);
   let price = 0;
   let totalShipping = 0;
   let quantity = 0;
@@ -16,7 +15,6 @@ const Carts = ({ cart }) => {
 
     // update quantity 1 first time exist  shortcut _____________
     // product.quantity = product.quantity || 1;
-    console.log(product);
 
     price += product.price * product.quantity;
     totalShipping += product.shipping * product.quantity;
