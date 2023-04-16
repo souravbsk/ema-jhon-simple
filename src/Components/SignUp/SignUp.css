@@ -1,0 +1,18 @@
+.accountLinkToggle {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+    text-align: center;
+    margin-top: 8px;
+}
+.accountLinkToggle a {
+    color: #FF9900;
+    text-decoration: none;
+}
+.errorText{
+    color: rgb(255, 133, 133);
+}

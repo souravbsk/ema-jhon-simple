@@ -1,4 +1,4 @@
-import { getShoppingCart } from "../../utilities/fakedb";
+import { getShoppingCart } from "../utilities/fakedb";
 
 const cartProductLoader = async () => {
 const productData = await fetch("products.json");

@@ -35,3 +35,26 @@
     letter-spacing: 0.0015em;
     color: #0E161A;
 }
+
+.addToCartAllBtn {
+    margin-top: 58px;
+}
+
+.clear-btn {
+    padding: 16px;
+    border: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    color: #FFFFFF;
+    background-color: #FF3030;
+    border-radius: 4px;
+
+}

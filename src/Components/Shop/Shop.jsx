@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { addToDb, getShoppingCart } from "../../utilities/fakedb";
+import {
+  addToDb,
+  deleteShoppingCart,
+  getShoppingCart,
+} from "../../utilities/fakedb";
 import Carts from "../Carts/Carts";
 import Product from "../Product/Product";
 import "./Shop.css";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightLeft, faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -37,20 +44,26 @@ const Shop = () => {
     // if product doesn't exist in the cart, then set quantity = 1
     // if exist update quantity by 1
 
-    const exists = cart.find(cartItem => cartItem.id === product.id);
-    if(!exists){
+    const exists = cart.find((cartItem) => cartItem.id === product.id);
+    if (!exists) {
       product.quantity = 1;
-      newCart = [...cart,product];
-    }
-    else{
+      newCart = [...cart, product];
+    } else {
       exists.quantity = exists.quantity + 1;
-      const restProduct= cart.filter(cartItem => cartItem.id !== product.id)
-      newCart = [...restProduct,exists]
+      const restProduct = cart.filter((cartItem) => cartItem.id !== product.id);
+      newCart = [...restProduct, exists];
     }
 
     setCart(newCart);
     addToDb(product.id);
   };
+
+  //clear all product from cart and local storage
+  const handleClearProduct = () => {
+    setCart([]);
+    deleteShoppingCart();
+  };
+
   return (
     <div className="shop-container">
       <div className="product-container">
@@ -66,7 +79,14 @@ const Shop = () => {
         }
       </div>
       <div>
-        <Carts cart={cart}></Carts>
+        <Carts cart={cart} handleClearProduct={handleClearProduct}>
+          <Link className="dynamic-link" to="/order">
+            <button className="dynamic-btn">
+              <span>Review Order</span>
+              <FontAwesomeIcon icon={faRightLong}></FontAwesomeIcon>
+            </button>
+          </Link>
+        </Carts>
       </div>
     </div>
   );
