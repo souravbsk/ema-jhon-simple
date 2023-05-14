@@ -14,9 +14,9 @@ const Order = () => {
 
   //remove specific item from cart with id
   const handleRemove = (id) => {
-    const restProduct = cart.filter((product) => product.id !== id);
+    const restProduct = cart.filter((product) => product._id !== id);
     setCart(restProduct);
-
+console.log(id);
     removeFromDb(id); //remove specific item from localStorage with id
   };
 
@@ -32,7 +32,7 @@ const Order = () => {
         {cart.map((product) => (
           <OrderItem
             handleRemove={handleRemove}
-            key={product.id}
+            key={product._id}
             product={product}
           ></OrderItem>
         ))}

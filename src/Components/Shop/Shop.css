@@ -31,3 +31,22 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.paginationArea{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.paginationArea button{
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+.paginationArea button:hover{
+    border: 1px solid black;
+}
+
+
+.paginationArea .selected{
+    background-color: #FF9900;
+}
